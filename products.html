@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty and You - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Beauty and You</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section class="content">
+        <h2>Our Organic Beauty Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://imgur.com/Ve8T8aU.png" alt="Shampoo">
+                <p>Nourishing Shampoo - Infused with coconut oil & ylang-ylang.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://imgur.com/ESFwy0e.png" alt="Conditioner">
+                <p>Moisturizing Conditioner - Hydrates & softens hair naturally.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://imgur.com/0cC4Xti.png" alt="Body Wash">
+                <p>Eco-friendly Body Wash - Made with coconut and floral extracts.</p>
+            </div>
+        </div>
+    </section>
+<!-- Falling Flowers Animation -->
+    <script>
+        function createFlower() {
+            const flower = document.createElement('img');
+            flower.src = 'https://imgur.com/MidHRdo.png'; // Flower Image URL
+            flower.classList.add('flower');
+            
+            // Random starting position
+            flower.style.left = Math.random() * window.innerWidth + 'px';
+            flower.style.top = '-50px'; // Start above the screen
+
+            // Random animation duration
+            flower.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+            // Append flower to body
+            document.body.appendChild(flower);
+
+            // Remove flower after it falls
+            setTimeout(() => flower.remove(), 5000);
+        }
+
+        // Generate falling flowers every 500ms
+        setInterval(createFlower, 500);
+    </script>
+
+
+</body>
+</html>
