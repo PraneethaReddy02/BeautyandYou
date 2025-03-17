@@ -35,30 +35,7 @@
         <img src="https://imgur.com/4ZbQ71j.png" alt="Sustainability Commitment">
     </section>
 
-<!-- Falling Flowers Animation -->
-    <script>
-        function createFlower() {
-            const flower = document.createElement('img');
-            flower.src = 'https://imgur.com/MidHRdo.png'; // Flower Image URL
-            flower.classList.add('flower');
-            
-            // Random starting position
-            flower.style.left = Math.random() * window.innerWidth + 'px';
-            flower.style.top = '-50px'; // Start above the screen
 
-            // Random animation duration
-            flower.style.animationDuration = Math.random() * 3 + 2 + 's';
-
-            // Append flower to body
-            document.body.appendChild(flower);
-
-            // Remove flower after it falls
-            setTimeout(() => flower.remove(), 5000);
-        }
-
-        // Generate falling flowers every 500ms
-        setInterval(createFlower, 500);
-    </script>
 
 </body>
 </html>
